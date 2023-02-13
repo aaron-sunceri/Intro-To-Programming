@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 5 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//--------//
+// Events //
+//--------//
+console.log("Events");
+
+// 1. Change the link (the <a> tag) in the HTML body below such that a hello
+//    message is displayed on a click event.
+
+function buttonClick(){
+  alert("Hello!");
+}
+
+
+//--------------//
+// Input Fields //
+//--------------//
+console.log("Input Fields");
+
+// 1. Change the background color to red for the input text field (the <input>
+//    tag) in the HTML body when obtaining the focus and change it back to
+//    white when the focus is lost.
+
+
+// 2. Read the content of the input field (the <input> tag) when the focus is
+//    lost and alert it to the user.
+
+
+
+//------------//
+// Paragraphs //
+//------------//
+console.log("Paragraphs");
+
+// 1. Write JavaScript code that changes the text in the paragraph below
+//    (the <p> tag) from "Hello World!" to "Goodbye World!".
+
+function changeParagraphText(){
+  var newText = "Goodbye World!";
+  document.getElementById("worldText").innerHTML = newText;
+}
+
+
+//--------//
+// Images //
+//--------//
+console.log("Images");
+
+// 1. Add an image to the HTML body (use the <img> tag). Make it disappear when
+//    someone clicks on it.
+
+function hideImage(){
+  document.getElementById("Logo").className+="hidden";
+}
+
+
+//--------//
+// Styles //
+//--------//
+console.log("Styles");
+
+// 1. Use the style of div1 and div2 to swap the colors of the divs.
+
+function swapColors(num) {
+  if (d1) {
+    style="background-color: green;"
+  }
+  else if (d2) {
+    style="background-color: yellow;"
+  }
+}
+
+
+
+</script>
+</head>
+<body>
+  See console!<br><br>
+  <a><button onclick="buttonClick()">Click here for a greeting!</button></a><br><br>
+  <a><input type="text" onfocus="this.style.backgroundColor='red';" onblur="this.style.backgroundColor='white'; alert('Focus was lost');"></a><br><br>
+  <p id="worldText" onclick="changeParagraphText()">Hello World!</p>
+  <img src="C:\Users\Ryan\Downloads\GuardLogo_1636145374502.png" id="Logo" width="300" height="300" onclick="hideImage()">
+  <div id="div1"
+       style="background-color:yellow;"
+       onclick="swapColors(d1);">
+    Hello
+  </div>
+  <div id="div2"
+       style="background-color:green;"
+       onclick="swapColors(d2);">
+    World
+  </div>
+</body>
+</html>
